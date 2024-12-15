@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise-7</title>
+    <style>
+         @font-face{
+        font-family: My Font;
+        src: url(../Media/Lora-Italic-VariableFont_wght.ttf);
+    }
+        body {
+            font-family: MY Font;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>JavaScript  Program To Appear Number Guessing Game</h2>
+    <p>Guess a number between 1 and 10!</p>
+    <button onclick="guessNumber()">Start Game</button>
+
+    <p id="result"></p>
+
+    <script>
+        function guessNumber() {
+            const randomNumber = Math.floor(Math.random() * 10) + 1;
+
+            const userGuess = parseInt(prompt("Enter a number between 1 and 10:"));
+            if (userGuess === randomNumber) {
+                document.getElementById("result").innerText = "Good Work!";
+            } else {
+                document.getElementById("result").innerText = `Not matched! The number was ${randomNumber}.`;
+            }
+        }
+    </script>
+</body>
+</html>
